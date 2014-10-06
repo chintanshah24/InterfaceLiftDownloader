@@ -1,5 +1,6 @@
 from lxml import html
 import requests
+import sys
 import urllib2
 import os
 
@@ -53,5 +54,6 @@ def downloadFiles(list_of_urls,path="imgs/"):
 
 	print("Done downloading.....")
 
-# Just edit this url to whatever suits you, making sure the resolution is a part of the url, best suggestion is to make a url from the site itself
-getList("http://interfacelift.com/wallpaper/downloads/rating/wide_16:10/2880x1800/")
+
+url=str(sys.argv[1])
+getList(url)
